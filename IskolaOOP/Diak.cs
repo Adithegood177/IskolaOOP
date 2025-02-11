@@ -8,10 +8,17 @@ namespace IskolaOOP
 {
 	internal class Diak
 	{
-		private string Nev { get; set; }
-		private string Osztaly { get; set; }
+		public string Nev { get; private set; }
+		public string Osztaly { get; private set; }
+		public int Id { get;private set; }
 
-		private int Id { get; set; }
+		public Diak(string nev, string osztaly, int id) { Nev = nev; Osztaly = osztaly; Id = id; }
+
+		public void Teljesnevkiiras() 
+		{
+            Console.WriteLine($"{Nev} {Osztaly}. osztályba jár");
+        }
+
 
 	}
 }
